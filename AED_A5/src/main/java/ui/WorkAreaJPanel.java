@@ -4,7 +4,9 @@
  */
 package main.java.ui;
 
+import java.awt.CardLayout;
 import javax.swing.JPanel;
+import model.Business.Business;
 
 /**
  *
@@ -13,12 +15,14 @@ import javax.swing.JPanel;
 public class WorkAreaJPanel extends javax.swing.JPanel {
 
     JPanel userProcessContainer;
+    Business business;
     /**
      * Creates new form WorkAreaJPanel
      */
-    public WorkAreaJPanel(JPanel userProcessContainer) {
+    public WorkAreaJPanel(JPanel userProcessContainer, Business business) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
+        this.business = business;
     }
 
     /**
@@ -63,6 +67,10 @@ public class WorkAreaJPanel extends javax.swing.JPanel {
     private void btnProductCtlgActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProductCtlgActionPerformed
 
         // TODO add your handling code here:
+        ManageProductsJPanel mpjp = new ManageProductsJPanel(business, userProcessContainer);
+        userProcessContainer.add("ManageProductsJPanel", mpjp);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
         
     }//GEN-LAST:event_btnProductCtlgActionPerformed
 

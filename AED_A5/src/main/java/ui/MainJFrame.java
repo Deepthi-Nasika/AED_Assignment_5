@@ -5,6 +5,8 @@
 package main.java.ui;
 
 import java.awt.CardLayout;
+import model.Business.Business;
+import model.Business.ConfigureABusiness;
 
 
 /**
@@ -12,12 +14,16 @@ import java.awt.CardLayout;
  * @author nasik
  */
 public class MainJFrame extends javax.swing.JFrame {
+    
+    Business business = ConfigureABusiness.initialize();
+    
 
     /**
      * Creates new form MainJFrame
      */
     public MainJFrame() {
         initComponents();
+        
     }
 
     /**
@@ -129,7 +135,7 @@ public class MainJFrame extends javax.swing.JFrame {
         
         String un = txtUsername.getText();
         
-        WorkAreaJPanel workAreaJPanel = new WorkAreaJPanel(userProcessContainer);
+        WorkAreaJPanel workAreaJPanel = new WorkAreaJPanel(userProcessContainer, business);
         userProcessContainer.add("WorkAreaJPanel", workAreaJPanel);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);
