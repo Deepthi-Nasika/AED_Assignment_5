@@ -43,6 +43,10 @@ public class Product {
     public void addOrderItem(OrderItem oi){     
         orderitems.add(oi);
     }
+
+    public void setTargetPrice(int targetPrice) {
+        this.targetPrice = targetPrice;
+    }
     //Number of item sales above target 
     public int getNumberOfProductSalesAboveTarget(){
         int sum = 0;

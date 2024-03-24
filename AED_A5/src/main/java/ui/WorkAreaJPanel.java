@@ -35,6 +35,7 @@ public class WorkAreaJPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         btnProductCtlg = new javax.swing.JButton();
+        btnOrderDetails = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 204, 204));
 
@@ -46,13 +47,25 @@ public class WorkAreaJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnOrderDetails.setText("Order Details");
+        btnOrderDetails.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnOrderDetailsActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(65, 65, 65)
-                .addComponent(btnProductCtlg, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(65, 65, 65)
+                        .addComponent(btnProductCtlg, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(96, 96, 96)
+                        .addComponent(btnOrderDetails)))
                 .addContainerGap(590, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -60,7 +73,9 @@ public class WorkAreaJPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGap(74, 74, 74)
                 .addComponent(btnProductCtlg, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(491, Short.MAX_VALUE))
+                .addGap(83, 83, 83)
+                .addComponent(btnOrderDetails)
+                .addContainerGap(385, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -74,8 +89,17 @@ public class WorkAreaJPanel extends javax.swing.JPanel {
         
     }//GEN-LAST:event_btnProductCtlgActionPerformed
 
+    private void btnOrderDetailsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOrderDetailsActionPerformed
+        // TODO add your handling code here:
+        OrderDetailsJPanel mpjp = new OrderDetailsJPanel(business, userProcessContainer);
+        userProcessContainer.add("OrderDetailsJPanel", mpjp);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
+    }//GEN-LAST:event_btnOrderDetailsActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnOrderDetails;
     private javax.swing.JButton btnProductCtlg;
     // End of variables declaration//GEN-END:variables
 }
