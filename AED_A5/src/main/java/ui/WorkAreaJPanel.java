@@ -39,12 +39,14 @@ public class WorkAreaJPanel extends javax.swing.JPanel {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
 
+
         setBackground(new java.awt.Color(153, 204, 255));
 
         btnProductCtlg.setFont(new java.awt.Font("Lucida Grande", 1, 12)); // NOI18N
 
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+
 
 
         setBackground(new java.awt.Color(255, 255, 255));
@@ -69,7 +71,9 @@ public class WorkAreaJPanel extends javax.swing.JPanel {
         });
 
 
+
         jButton1.setFont(new java.awt.Font("Lucida Grande", 1, 12)); // NOI18N
+
 
         jButton1.setText("Change Target Prices");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -79,6 +83,7 @@ public class WorkAreaJPanel extends javax.swing.JPanel {
         });
 
         jButton2.setFont(new java.awt.Font("Lucida Grande", 1, 12)); // NOI18N
+
 
         jButton2.setText("Report");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -111,8 +116,10 @@ public class WorkAreaJPanel extends javax.swing.JPanel {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(96, 96, 96)
 
+
                         .addComponent(btnOrderDetails)))
                 .addContainerGap(590, Short.MAX_VALUE))
+
 
                         .addComponent(btnOrderDetails)
                         .addGap(161, 161, 161)
@@ -159,6 +166,9 @@ public class WorkAreaJPanel extends javax.swing.JPanel {
 
     private void btnOrderDetailsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOrderDetailsActionPerformed
         // TODO add your handling code here:
+        //OrderDetailsJPanel mpjp = new OrderDetailsJPanel(business, userProcessContainer);
+        //userProcessContainer.add("OrderDetailsJPanel", mpjp);
+
 
         //OrderDetailsJPanel mpjp = new OrderDetailsJPanel(business, userProcessContainer);
         //userProcessContainer.add("OrderDetailsJPanel", mpjp);
@@ -168,6 +178,7 @@ public class WorkAreaJPanel extends javax.swing.JPanel {
 
         //OrderDetailsJPanel mpjp = new OrderDetailsJPanel(business, userProcessContainer);
         //userProcessContainer.add("OrderDetailsJPanel", mpjp);
+
 
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);

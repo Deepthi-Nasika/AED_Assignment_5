@@ -95,12 +95,28 @@ public class ReportJPanel extends javax.swing.JPanel {
 
         for (Product pt : pc.getProductList()) {
 
+
+            Object[] row = new Object[7];
+
             Object[] row = new Object[5];
             row[0] = pt;
             row[1] = pt.getFloorPrice();
             row[2] = pt.getCeilingPrice();
             row[3] = pt.getTargetPrice();
             row[4] = pt.getOrderPricePerformance();
+            int newTarget = pt.getFinaltargetprice();
+        if (newTarget != 0) {
+            row[5] = newTarget;
+        } else {
+            row[5] = ""; // Set empty string if value is zero
+        }
+
+        int newMargin = pt.getFinalMargin();
+        if (newMargin != 0) {
+            row[6] = newMargin;
+        } else {
+            row[6] = ""; // Set empty string if value is zero
+        }
             ((DefaultTableModel) SupplierCatalogTable.getModel()).addRow(row);
         }
 

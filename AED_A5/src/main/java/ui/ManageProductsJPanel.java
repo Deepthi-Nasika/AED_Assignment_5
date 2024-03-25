@@ -201,74 +201,12 @@ public class ManageProductsJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(SupplierCatalogTable);
 
-        jScrollPane2.setViewportView(jScrollPane1);
-
-        jLabel3.setText("Product name");
-
-        productNameTextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                productNameTextFieldActionPerformed(evt);
-            }
-        });
-
-        jLabel4.setText("Frequency Above Target");
-
-        productRevenueTextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                productRevenueTextFieldActionPerformed(evt);
-            }
-        });
-
-        jLabel5.setText("Sales Revenues");
-
-        jLabel6.setText("Frequency Below Target");
-
-        productPricePerformanceTextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                productPricePerformanceTextFieldActionPerformed(evt);
-            }
-        });
-
-        jLabel7.setText("Margin");
-
-        jLabel8.setText("Product");
-
-        btnDecTarget.setText("Decrease Target");
-        btnDecTarget.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnDecTargetActionPerformed(evt);
-            }
-        });
-
-        btnIncTarget.setText("Increase Target");
-        btnIncTarget.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnIncTargetActionPerformed(evt);
-            }
-        });
-
-        lblUpdateTarget.setText("Update Target:");
-
-        jLabel10.setText("Target:");
-
-        btnSave.setText("Save");
-        btnSave.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSaveActionPerformed(evt);
-            }
-        });
-
-        txtTarget.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtTargetActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
 
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
 
@@ -355,6 +293,7 @@ public class ManageProductsJPanel extends javax.swing.JPanel {
                 .addGap(26, 26, 26)
                 .addComponent(Next)
                 .addContainerGap(55, Short.MAX_VALUE))
+
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -388,6 +327,7 @@ public class ManageProductsJPanel extends javax.swing.JPanel {
                     .addComponent(btnDecTarget)
                     .addComponent(btnIncTarget))
                 .addContainerGap(74, Short.MAX_VALUE))
+
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -423,11 +363,18 @@ public class ManageProductsJPanel extends javax.swing.JPanel {
         if (selectedproduct == null) {
             return;
         }
+
+        ChangeTargetJPanel mpjp = new ChangeTargetJPanel(business, userProcessContainer, selectedproduct);
+        userProcessContainer.add("ChangeTargetJPanel", mpjp);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
+
         JOptionPane.showMessageDialog(this, selectedproduct.toString());
 //        ChangeTargetJPanel mpjp = new ChangeTargetJPanel(business, userProcessContainer, selectedproduct);
 //        userProcessContainer.add("ChangeTargetJPanel", mpjp);
 //        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
 //        layout.next(userProcessContainer);
+
     }//GEN-LAST:event_NextActionPerformed
 
     private void SupplierCatalogTableMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SupplierCatalogTableMouseEntered
@@ -456,6 +403,10 @@ public class ManageProductsJPanel extends javax.swing.JPanel {
 //        productFrequencyBelowTargetTextField.setText( String.valueOf(productsummary.getNumberBelowTarget()));
 //        productPricePerformanceTextField.setText(String.valueOf(productsummary.getProductPricePerformance()));
 //        txtTarget.setText(String.valueOf(selectedproduct.getTargetPrice()));
+
+    }//GEN-LAST:event_SupplierCatalogTableMousePressed
+
+
 
     }//GEN-LAST:event_SupplierCatalogTableMousePressed
 
@@ -549,6 +500,7 @@ private void adjustTargetPricesHigher() {
 }
     }//GEN-LAST:event_SupplierCatalogTableMousePressed
 
+
 //private void adjustTargetPricesLower() {
 //    ProductCatalog pc = selectedsupplier.getProductCatalog();
 //    for (Product product : pc.getProductList()) {
@@ -577,6 +529,10 @@ private void adjustTargetPricesHigher() {
     private javax.swing.JTable SupplierCatalogTable;
     private javax.swing.JComboBox<String> SuppliersComboBox;
     private javax.swing.JLabel jLabel1;
+
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JScrollPane jScrollPane1;
+
     private javax.swing.JLabel jLabel8;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel jLabel10;
@@ -599,5 +555,6 @@ private void adjustTargetPricesHigher() {
 
     private javax.swing.JLabel jLabel8;
     private javax.swing.JScrollPane jScrollPane1;
+
     // End of variables declaration//GEN-END:variables
 }
