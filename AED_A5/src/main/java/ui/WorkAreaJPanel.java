@@ -36,8 +36,10 @@ public class WorkAreaJPanel extends javax.swing.JPanel {
 
         btnProductCtlg = new javax.swing.JButton();
         btnOrderDetails = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(255, 204, 204));
+        setBackground(new java.awt.Color(255, 255, 255));
 
         btnProductCtlg.setBackground(new java.awt.Color(204, 204, 255));
         btnProductCtlg.setText("Product Catalog");
@@ -54,6 +56,20 @@ public class WorkAreaJPanel extends javax.swing.JPanel {
             }
         });
 
+        jButton1.setText("Change Target Prices");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        jButton2.setText("Report");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -62,19 +78,27 @@ public class WorkAreaJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(65, 65, 65)
-                        .addComponent(btnProductCtlg, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(btnProductCtlg, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(107, 107, 107)
+                        .addComponent(jButton1))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(96, 96, 96)
-                        .addComponent(btnOrderDetails)))
-                .addContainerGap(590, Short.MAX_VALUE))
+                        .addComponent(btnOrderDetails)
+                        .addGap(161, 161, 161)
+                        .addComponent(jButton2)))
+                .addContainerGap(329, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(74, 74, 74)
-                .addComponent(btnProductCtlg, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnProductCtlg, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton1))
                 .addGap(83, 83, 83)
-                .addComponent(btnOrderDetails)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnOrderDetails)
+                    .addComponent(jButton2))
                 .addContainerGap(385, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
@@ -82,8 +106,8 @@ public class WorkAreaJPanel extends javax.swing.JPanel {
     private void btnProductCtlgActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProductCtlgActionPerformed
 
         // TODO add your handling code here:
-        ManageProductsJPanel mpjp = new ManageProductsJPanel(business, userProcessContainer);
-        userProcessContainer.add("ManageProductsJPanel", mpjp);
+        ProductCatalogJPanel mpjp = new ProductCatalogJPanel(business, userProcessContainer);
+        userProcessContainer.add("ProductCatalogJPanel", mpjp);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);
         
@@ -91,15 +115,34 @@ public class WorkAreaJPanel extends javax.swing.JPanel {
 
     private void btnOrderDetailsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOrderDetailsActionPerformed
         // TODO add your handling code here:
-        OrderDetailsJPanel mpjp = new OrderDetailsJPanel(business, userProcessContainer);
-        userProcessContainer.add("OrderDetailsJPanel", mpjp);
+        //OrderDetailsJPanel mpjp = new OrderDetailsJPanel(business, userProcessContainer);
+        //userProcessContainer.add("OrderDetailsJPanel", mpjp);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);
     }//GEN-LAST:event_btnOrderDetailsActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        // TODO add your handling code here:
+        ManageProductsJPanel mpjp = new ManageProductsJPanel(business, userProcessContainer);
+        userProcessContainer.add("ManageProductsJPanel", mpjp);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        ReportJPanel mpjp = new ReportJPanel(business, userProcessContainer);
+        userProcessContainer.add("ReportJPanel", mpjp);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
+    }//GEN-LAST:event_jButton2ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnOrderDetails;
     private javax.swing.JButton btnProductCtlg;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     // End of variables declaration//GEN-END:variables
 }
