@@ -47,9 +47,8 @@ public class MainJFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        ActionSideJPanel.setBackground(new java.awt.Color(0, 153, 204));
+        ActionSideJPanel.setBackground(new java.awt.Color(255, 204, 204));
 
-        lblUsername.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
         lblUsername.setText("User Name");
 
         txtUsername.addActionListener(new java.awt.event.ActionListener() {
@@ -58,7 +57,6 @@ public class MainJFrame extends javax.swing.JFrame {
             }
         });
 
-        btnLogin.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
         btnLogin.setText("Login");
         btnLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -66,10 +64,9 @@ public class MainJFrame extends javax.swing.JFrame {
             }
         });
 
-        lblPassword.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
         lblPassword.setText("Password");
 
-        lblTitle.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
+        lblTitle.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         lblTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblTitle.setText("SUPPLIER");
 
@@ -78,21 +75,23 @@ public class MainJFrame extends javax.swing.JFrame {
         ActionSideJPanelLayout.setHorizontalGroup(
             ActionSideJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ActionSideJPanelLayout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(ActionSideJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(ActionSideJPanelLayout.createSequentialGroup()
+                        .addContainerGap()
                         .addGroup(ActionSideJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(pwdtxtPassword)
                             .addComponent(txtUsername)
                             .addComponent(lblUsername, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(lblPassword, javax.swing.GroupLayout.DEFAULT_SIZE, 105, Short.MAX_VALUE))
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(lblTitle, javax.swing.GroupLayout.DEFAULT_SIZE, 121, Short.MAX_VALUE))
+                    .addGroup(ActionSideJPanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(lblTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(ActionSideJPanelLayout.createSequentialGroup()
-                .addGap(20, 20, 20)
+                .addGap(29, 29, 29)
                 .addComponent(btnLogin)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(32, Short.MAX_VALUE))
         );
         ActionSideJPanelLayout.setVerticalGroup(
             ActionSideJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -109,12 +108,11 @@ public class MainJFrame extends javax.swing.JFrame {
                 .addComponent(pwdtxtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnLogin)
-                .addContainerGap(365, Short.MAX_VALUE))
+                .addContainerGap(370, Short.MAX_VALUE))
         );
 
         SplitHomeArea.setLeftComponent(ActionSideJPanel);
 
-        userProcessContainer.setBackground(new java.awt.Color(153, 204, 255));
         userProcessContainer.setLayout(new java.awt.CardLayout());
         SplitHomeArea.setRightComponent(userProcessContainer);
 
