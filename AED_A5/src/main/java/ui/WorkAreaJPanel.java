@@ -39,15 +39,29 @@ public class WorkAreaJPanel extends javax.swing.JPanel {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
 
+
+        setBackground(new java.awt.Color(153, 204, 255));
+
+        btnProductCtlg.setFont(new java.awt.Font("Lucida Grande", 1, 12)); // NOI18N
+
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+
+
+
         setBackground(new java.awt.Color(255, 255, 255));
 
         btnProductCtlg.setBackground(new java.awt.Color(204, 204, 255));
+
         btnProductCtlg.setText("Product Catalog");
         btnProductCtlg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnProductCtlgActionPerformed(evt);
             }
         });
+
+
+        btnOrderDetails.setFont(new java.awt.Font("Lucida Grande", 1, 12)); // NOI18N
 
         btnOrderDetails.setText("Order Details");
         btnOrderDetails.addActionListener(new java.awt.event.ActionListener() {
@@ -56,12 +70,20 @@ public class WorkAreaJPanel extends javax.swing.JPanel {
             }
         });
 
+
+
+        jButton1.setFont(new java.awt.Font("Lucida Grande", 1, 12)); // NOI18N
+
+
         jButton1.setText("Change Target Prices");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
+
+        jButton2.setFont(new java.awt.Font("Lucida Grande", 1, 12)); // NOI18N
+
 
         jButton2.setText("Report");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -75,6 +97,16 @@ public class WorkAreaJPanel extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(96, 96, 96)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btnProductCtlg, javax.swing.GroupLayout.DEFAULT_SIZE, 145, Short.MAX_VALUE)
+                    .addComponent(btnOrderDetails, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(76, 76, 76)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton1))
+                .addContainerGap(322, Short.MAX_VALUE))
+
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(65, 65, 65)
@@ -83,14 +115,32 @@ public class WorkAreaJPanel extends javax.swing.JPanel {
                         .addComponent(jButton1))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(96, 96, 96)
+
+
+                        .addComponent(btnOrderDetails)))
+                .addContainerGap(590, Short.MAX_VALUE))
+
+
                         .addComponent(btnOrderDetails)
                         .addGap(161, 161, 161)
                         .addComponent(jButton2)))
                 .addContainerGap(329, Short.MAX_VALUE))
+
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+
+                .addGap(102, 102, 102)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnProductCtlg, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(53, 53, 53)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnOrderDetails, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(368, Short.MAX_VALUE))
+
                 .addGap(74, 74, 74)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnProductCtlg, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -100,6 +150,7 @@ public class WorkAreaJPanel extends javax.swing.JPanel {
                     .addComponent(btnOrderDetails)
                     .addComponent(jButton2))
                 .addContainerGap(385, Short.MAX_VALUE))
+
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -117,6 +168,18 @@ public class WorkAreaJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         //OrderDetailsJPanel mpjp = new OrderDetailsJPanel(business, userProcessContainer);
         //userProcessContainer.add("OrderDetailsJPanel", mpjp);
+
+
+        //OrderDetailsJPanel mpjp = new OrderDetailsJPanel(business, userProcessContainer);
+        //userProcessContainer.add("OrderDetailsJPanel", mpjp);
+
+        OrderDetailsJPanel mpjp = new OrderDetailsJPanel(business, userProcessContainer);
+        userProcessContainer.add("OrderDetailsJPanel", mpjp);
+
+        //OrderDetailsJPanel mpjp = new OrderDetailsJPanel(business, userProcessContainer);
+        //userProcessContainer.add("OrderDetailsJPanel", mpjp);
+
+
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);
     }//GEN-LAST:event_btnOrderDetailsActionPerformed

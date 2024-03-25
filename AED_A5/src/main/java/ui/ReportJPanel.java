@@ -95,7 +95,10 @@ public class ReportJPanel extends javax.swing.JPanel {
 
         for (Product pt : pc.getProductList()) {
 
+
             Object[] row = new Object[7];
+
+            Object[] row = new Object[5];
             row[0] = pt;
             row[1] = pt.getFloorPrice();
             row[2] = pt.getCeilingPrice();
