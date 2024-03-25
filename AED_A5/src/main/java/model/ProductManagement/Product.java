@@ -39,9 +39,18 @@ public class Product {
         targetPrice = tp;
         return this; //returns itself
     }
+        
+    public ArrayList<OrderItem> getOrderItems(){
+        return orderitems;
+    } 
+    
     public int getTargetPrice() {return targetPrice;}
     public void addOrderItem(OrderItem oi){     
         orderitems.add(oi);
+    }
+
+    public void setTargetPrice(int targetPrice) {
+        this.targetPrice = targetPrice;
     }
     //Number of item sales above target 
     public int getNumberOfProductSalesAboveTarget(){
@@ -98,5 +107,7 @@ public class Product {
     public int getCeilingPrice(){
         return ceilingPrice;
     }
+   
+    
 
 }
