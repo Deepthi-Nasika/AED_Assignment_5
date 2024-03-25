@@ -6,6 +6,7 @@ package main.java.ui;
 
 import java.awt.CardLayout;
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
 import model.Business.Business;
@@ -69,7 +70,7 @@ public class ManageProductsJPanel extends javax.swing.JPanel {
                 row[1] = pt.getFloorPrice();
                 row[2] = pt.getCeilingPrice();
                 row[3] = pt.getTargetPrice();
-                // row[1] = pt.getPerformanceMeasure();
+                row[4] = pt.getOrderPricePerformance();
                 // row[2] = la.getName();
                 ((DefaultTableModel) SupplierCatalogTable.getModel()).addRow(row);
             }
@@ -120,9 +121,10 @@ public class ManageProductsJPanel extends javax.swing.JPanel {
         Back = new javax.swing.JButton();
         Next = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jScrollPane2 = new javax.swing.JScrollPane();
+        jLabel8 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         SupplierCatalogTable = new javax.swing.JTable();
+
         jLabel3 = new javax.swing.JLabel();
         productNameTextField = new javax.swing.JTextField();
         productFrequencyAboveTargetTextField = new javax.swing.JTextField();
@@ -142,7 +144,8 @@ public class ManageProductsJPanel extends javax.swing.JPanel {
         txtUpdateTarget = new javax.swing.JTextField();
         txtTarget = new javax.swing.JTextField();
 
-        setBackground(new java.awt.Color(255, 204, 204));
+
+        setBackground(new java.awt.Color(153, 204, 255));
 
         SuppliersComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -157,15 +160,21 @@ public class ManageProductsJPanel extends javax.swing.JPanel {
             }
         });
 
-        Next.setText("Next >>");
+        Next.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
+        Next.setText("Change Target Price");
         Next.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 NextActionPerformed(evt);
             }
         });
 
+        jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
         jLabel1.setText("Suppliers");
 
+        jLabel8.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
+        jLabel8.setText("Product");
+
+        SupplierCatalogTable.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
         SupplierCatalogTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
@@ -194,6 +203,7 @@ public class ManageProductsJPanel extends javax.swing.JPanel {
             }
         });
         jScrollPane1.setViewportView(SupplierCatalogTable);
+
 
         jScrollPane2.setViewportView(jScrollPane1);
 
@@ -258,11 +268,14 @@ public class ManageProductsJPanel extends javax.swing.JPanel {
             }
         });
 
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(76, 76, 76)
@@ -311,30 +324,42 @@ public class ManageProductsJPanel extends javax.swing.JPanel {
                                     .addComponent(jLabel10)
                                     .addComponent(productFrequencyBelowTargetTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(txtTarget, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(Back))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(110, 110, 110)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(Next, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 580, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(110, Short.MAX_VALUE))
+                        .addGap(28, 28, 28)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(SuppliersComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 568, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(2, 2, 2)
+                                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel1)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addContainerGap(424, Short.MAX_VALUE)
+                        .addComponent(Next, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(199, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(Back)
-                .addGap(42, 42, 42)
+                .addGap(28, 28, 28)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(SuppliersComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(8, 8, 8)
+
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 347, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(26, 26, 26)
+                .addComponent(Next)
+                .addContainerGap(55, Short.MAX_VALUE))
+
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -368,6 +393,7 @@ public class ManageProductsJPanel extends javax.swing.JPanel {
                     .addComponent(btnDecTarget)
                     .addComponent(btnIncTarget))
                 .addContainerGap(74, Short.MAX_VALUE))
+
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -393,6 +419,21 @@ public class ManageProductsJPanel extends javax.swing.JPanel {
 //        ManageProductPerformanceDetail mppd = new ManageProductPerformanceDetail(selectedproduct, CardSequencePanel);
 //        CardSequencePanel.add(mppd);
 //        ((java.awt.CardLayout) CardSequencePanel.getLayout()).next(CardSequencePanel);
+        int selectedRow = SupplierCatalogTable.getSelectedRow();
+        if(selectedRow<0){
+            JOptionPane.showMessageDialog(null, "Please select a row from the table", "Warning", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+        
+        selectedproduct = (Product) SupplierCatalogTable.getValueAt(selectedRow, 0);
+        if (selectedproduct == null) {
+            return;
+        }
+        JOptionPane.showMessageDialog(this, selectedproduct.toString());
+        ChangeTargetJPanel mpjp = new ChangeTargetJPanel(business, userProcessContainer, selectedproduct);
+        userProcessContainer.add("ChangeTargetJPanel", mpjp);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
     }//GEN-LAST:event_NextActionPerformed
 
     private void SupplierCatalogTableMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SupplierCatalogTableMouseEntered
@@ -413,6 +454,38 @@ public class ManageProductsJPanel extends javax.swing.JPanel {
         }
 
         ProductSummary productsummary = new ProductSummary(selectedproduct);
+
+
+//        productNameTextField.setText(selectedproduct.toString());
+//        String revenues = String.valueOf(productsummary.getSalesRevenues());
+//        productRevenueTextField.setText(revenues);
+//        productFrequencyAboveTargetTextField.setText( String.valueOf(productsummary.getNumberAboveTarget()));
+//        productFrequencyBelowTargetTextField.setText( String.valueOf(productsummary.getNumberBelowTarget()));
+//        productPricePerformanceTextField.setText(String.valueOf(productsummary.getProductPricePerformance()));
+//        txtTarget.setText(String.valueOf(selectedproduct.getTargetPrice()));
+    }//GEN-LAST:event_SupplierCatalogTableMousePressed
+
+//private void adjustTargetPricesLower() {
+//    ProductCatalog pc = selectedsupplier.getProductCatalog();
+//    for (Product product : pc.getProductList()) {
+//        if (product.getOrderPricePerformance() < 0) { // Assuming negative performance indicates actual sales below target
+//            int newTargetPrice = product.getTargetPrice() - (int)(product.getTargetPrice() * 0.05); // Lower by 5%
+//            product.setTargetPrice(newTargetPrice);
+//        }
+//    }
+//    refreshTable(); // Refresh the table to display updated prices
+//}
+//
+//private void adjustTargetPricesHigher() {
+//    ProductCatalog pc = selectedsupplier.getProductCatalog();
+//    for (Product product : pc.getProductList()) {
+//        if (product.getOrderPricePerformance() > 0) { // Assuming positive performance indicates actual sales above target
+//            int newTargetPrice = product.getTargetPrice() + (int)(product.getTargetPrice() * 0.05); // Increase by 5%
+//            product.setTargetPrice(newTargetPrice);
+//        }
+//    }
+//    refreshTable(); // Refresh the table to display updated prices
+//}
 
         productNameTextField.setText(selectedproduct.toString());
         String revenues = String.valueOf(productsummary.getSalesRevenues());
@@ -482,6 +555,7 @@ private void adjustTargetPricesHigher() {
     refreshTable(); // Refresh the table to display updated prices
 }
 
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Back;
     private javax.swing.JButton Next;
@@ -491,6 +565,10 @@ private void adjustTargetPricesHigher() {
     private javax.swing.JButton btnIncTarget;
     private javax.swing.JButton btnSave;
     private javax.swing.JLabel jLabel1;
+
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JScrollPane jScrollPane1;
+
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -508,5 +586,6 @@ private void adjustTargetPricesHigher() {
     private javax.swing.JTextField productRevenueTextField;
     private javax.swing.JTextField txtTarget;
     private javax.swing.JTextField txtUpdateTarget;
+
     // End of variables declaration//GEN-END:variables
 }

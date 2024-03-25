@@ -5,6 +5,8 @@
  */
 package model.ProductManagement;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author kal bugrara
@@ -20,7 +22,10 @@ public class ProductSummary {
     int rank; // will be done later
     
     public ProductSummary(Product p){
-        
+//        if(p == null){
+//            JOptionPane.showMessageDialog(null, "Product does not exist", "Warning", JOptionPane.WARNING_MESSAGE);
+//            return;
+//        }
         numberofsalesabovetarget = p.getNumberOfProductSalesAboveTarget();
         productpriceperformance = p.getOrderPricePerformance();
         subjectproduct = p; //keeps track of the product itself not as well;
