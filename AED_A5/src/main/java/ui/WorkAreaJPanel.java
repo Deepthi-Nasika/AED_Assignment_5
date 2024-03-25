@@ -36,19 +36,21 @@ public class WorkAreaJPanel extends javax.swing.JPanel {
 
         btnProductCtlg = new javax.swing.JButton();
         btnOrderDetails = new javax.swing.JButton();
-<<<<<<< HEAD
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(153, 204, 255));
 
         btnProductCtlg.setFont(new java.awt.Font("Lucida Grande", 1, 12)); // NOI18N
-=======
 
-        setBackground(new java.awt.Color(255, 204, 204));
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+
+
+        setBackground(new java.awt.Color(255, 255, 255));
 
         btnProductCtlg.setBackground(new java.awt.Color(204, 204, 255));
->>>>>>> main
+
         btnProductCtlg.setText("Product Catalog");
         btnProductCtlg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -56,10 +58,9 @@ public class WorkAreaJPanel extends javax.swing.JPanel {
             }
         });
 
-<<<<<<< HEAD
+
         btnOrderDetails.setFont(new java.awt.Font("Lucida Grande", 1, 12)); // NOI18N
-=======
->>>>>>> main
+
         btnOrderDetails.setText("Order Details");
         btnOrderDetails.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -67,8 +68,9 @@ public class WorkAreaJPanel extends javax.swing.JPanel {
             }
         });
 
-<<<<<<< HEAD
+
         jButton1.setFont(new java.awt.Font("Lucida Grande", 1, 12)); // NOI18N
+
         jButton1.setText("Change Target Prices");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -77,6 +79,7 @@ public class WorkAreaJPanel extends javax.swing.JPanel {
         });
 
         jButton2.setFont(new java.awt.Font("Lucida Grande", 1, 12)); // NOI18N
+
         jButton2.setText("Report");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -84,14 +87,11 @@ public class WorkAreaJPanel extends javax.swing.JPanel {
             }
         });
 
-=======
->>>>>>> main
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-<<<<<<< HEAD
                 .addGap(96, 96, 96)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(btnProductCtlg, javax.swing.GroupLayout.DEFAULT_SIZE, 145, Short.MAX_VALUE)
@@ -101,21 +101,29 @@ public class WorkAreaJPanel extends javax.swing.JPanel {
                     .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton1))
                 .addContainerGap(322, Short.MAX_VALUE))
-=======
+
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(65, 65, 65)
-                        .addComponent(btnProductCtlg, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(btnProductCtlg, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(107, 107, 107)
+                        .addComponent(jButton1))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(96, 96, 96)
+
                         .addComponent(btnOrderDetails)))
                 .addContainerGap(590, Short.MAX_VALUE))
->>>>>>> main
+
+                        .addComponent(btnOrderDetails)
+                        .addGap(161, 161, 161)
+                        .addComponent(jButton2)))
+                .addContainerGap(329, Short.MAX_VALUE))
+
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-<<<<<<< HEAD
+
                 .addGap(102, 102, 102)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnProductCtlg, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -125,21 +133,25 @@ public class WorkAreaJPanel extends javax.swing.JPanel {
                     .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnOrderDetails, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(368, Short.MAX_VALUE))
-=======
+
                 .addGap(74, 74, 74)
-                .addComponent(btnProductCtlg, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnProductCtlg, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton1))
                 .addGap(83, 83, 83)
-                .addComponent(btnOrderDetails)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnOrderDetails)
+                    .addComponent(jButton2))
                 .addContainerGap(385, Short.MAX_VALUE))
->>>>>>> main
+
         );
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnProductCtlgActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProductCtlgActionPerformed
 
         // TODO add your handling code here:
-        ManageProductsJPanel mpjp = new ManageProductsJPanel(business, userProcessContainer);
-        userProcessContainer.add("ManageProductsJPanel", mpjp);
+        ProductCatalogJPanel mpjp = new ProductCatalogJPanel(business, userProcessContainer);
+        userProcessContainer.add("ProductCatalogJPanel", mpjp);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);
         
@@ -147,18 +159,20 @@ public class WorkAreaJPanel extends javax.swing.JPanel {
 
     private void btnOrderDetailsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOrderDetailsActionPerformed
         // TODO add your handling code here:
-<<<<<<< HEAD
+
         //OrderDetailsJPanel mpjp = new OrderDetailsJPanel(business, userProcessContainer);
         //userProcessContainer.add("OrderDetailsJPanel", mpjp);
-=======
+
         OrderDetailsJPanel mpjp = new OrderDetailsJPanel(business, userProcessContainer);
         userProcessContainer.add("OrderDetailsJPanel", mpjp);
->>>>>>> main
+
+        //OrderDetailsJPanel mpjp = new OrderDetailsJPanel(business, userProcessContainer);
+        //userProcessContainer.add("OrderDetailsJPanel", mpjp);
+
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);
     }//GEN-LAST:event_btnOrderDetailsActionPerformed
 
-<<<<<<< HEAD
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         // TODO add your handling code here:
@@ -176,11 +190,11 @@ public class WorkAreaJPanel extends javax.swing.JPanel {
         layout.next(userProcessContainer);
     }//GEN-LAST:event_jButton2ActionPerformed
 
-=======
->>>>>>> main
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnOrderDetails;
     private javax.swing.JButton btnProductCtlg;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     // End of variables declaration//GEN-END:variables
 }

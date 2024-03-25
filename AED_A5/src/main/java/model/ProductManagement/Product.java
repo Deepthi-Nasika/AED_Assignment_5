@@ -47,6 +47,9 @@ public class Product {
     public void setTargetPrice(int targetPrice) {
         this.targetPrice = targetPrice;
     }
+    public ArrayList<OrderItem> getOrderItems(){
+        return orderitems;
+    }
     //Number of item sales above target 
     public int getNumberOfProductSalesAboveTarget(){
         int sum = 0;
