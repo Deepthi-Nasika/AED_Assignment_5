@@ -18,6 +18,24 @@ public class Product {
     private int floorPrice;
     private int ceilingPrice;
     private int targetPrice;
+     int  finaltargetprice;
+     int finalMargin;
+    public int getFinaltargetprice() {
+        return finaltargetprice;
+    }
+
+    public void setFinaltargetprice(int finaltargetprice) {
+        this.finaltargetprice = finaltargetprice;
+    }
+
+    public int getFinalMargin() {
+        return finalMargin;
+    }
+
+    public void setFinalMargin(int finalMargin) {
+        this.finalMargin = finalMargin;
+    }
+     
     ArrayList<OrderItem> orderitems;
         public Product( int fp, int cp, int tp) {
 
@@ -39,6 +57,11 @@ public class Product {
         targetPrice = tp;
         return this; //returns itself
     }
+        
+    public ArrayList<OrderItem> getOrderItems(){
+        return orderitems;
+    } 
+    
     public int getTargetPrice() {return targetPrice;}
     public void addOrderItem(OrderItem oi){     
         orderitems.add(oi);
@@ -46,9 +69,6 @@ public class Product {
 
     public void setTargetPrice(int targetPrice) {
         this.targetPrice = targetPrice;
-    }
-    public ArrayList<OrderItem> getOrderItems(){
-        return orderitems;
     }
     //Number of item sales above target 
     public int getNumberOfProductSalesAboveTarget(){
@@ -105,5 +125,7 @@ public class Product {
     public int getCeilingPrice(){
         return ceilingPrice;
     }
+   
+    
 
 }
