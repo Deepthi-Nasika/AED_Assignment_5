@@ -35,9 +35,12 @@ public class WorkAreaJPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         btnProductCtlg = new javax.swing.JButton();
-        btnOrderDetails = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+
+        setBackground(new java.awt.Color(153, 204, 255));
+
+        btnProductCtlg.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
 
 
         setBackground(new java.awt.Color(153, 204, 255));
@@ -53,12 +56,16 @@ public class WorkAreaJPanel extends javax.swing.JPanel {
 
         btnProductCtlg.setBackground(new java.awt.Color(204, 204, 255));
 
+
         btnProductCtlg.setText("Product Catalog");
         btnProductCtlg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnProductCtlgActionPerformed(evt);
             }
         });
+
+
+        jButton1.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
 
 
         btnOrderDetails.setFont(new java.awt.Font("Lucida Grande", 1, 12)); // NOI18N
@@ -75,6 +82,7 @@ public class WorkAreaJPanel extends javax.swing.JPanel {
         jButton1.setFont(new java.awt.Font("Lucida Grande", 1, 12)); // NOI18N
 
 
+
         jButton1.setText("Change Target Prices");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -82,8 +90,10 @@ public class WorkAreaJPanel extends javax.swing.JPanel {
             }
         });
 
-        jButton2.setFont(new java.awt.Font("Lucida Grande", 1, 12)); // NOI18N
 
+        jButton2.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+
+        jButton2.setFont(new java.awt.Font("Lucida Grande", 1, 12)); // NOI18N
 
         jButton2.setText("Report");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -97,6 +107,13 @@ public class WorkAreaJPanel extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(65, 65, 65)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 281, Short.MAX_VALUE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnProductCtlg, javax.swing.GroupLayout.DEFAULT_SIZE, 281, Short.MAX_VALUE)))
+                .addContainerGap(440, Short.MAX_VALUE))
                 .addGap(96, 96, 96)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(btnProductCtlg, javax.swing.GroupLayout.DEFAULT_SIZE, 145, Short.MAX_VALUE)
@@ -142,6 +159,13 @@ public class WorkAreaJPanel extends javax.swing.JPanel {
                 .addContainerGap(368, Short.MAX_VALUE))
 
                 .addGap(74, 74, 74)
+
+                .addComponent(btnProductCtlg, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(42, 42, 42)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(38, 38, 38)
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(293, Short.MAX_VALUE))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnProductCtlg, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton1))
@@ -203,7 +227,6 @@ public class WorkAreaJPanel extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnOrderDetails;
     private javax.swing.JButton btnProductCtlg;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
