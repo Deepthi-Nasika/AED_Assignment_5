@@ -114,6 +114,10 @@ public class ChangeTargetJPanel extends javax.swing.JPanel {
         jLabel10.setText("Target");
 
         productRevenueTextField.setEditable(false);
+
+        jLabel10.setText("Target:");
+
+
         productRevenueTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 productRevenueTextFieldActionPerformed(evt);
@@ -126,16 +130,19 @@ public class ChangeTargetJPanel extends javax.swing.JPanel {
         productFrequencyBelowTargetTextField.setEditable(false);
 
         txtTarget.setEditable(false);
+        jLabel5.setText("Sales Revenues");
+
         txtTarget.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtTargetActionPerformed(evt);
             }
         });
-
         jLabel6.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel6.setText("Frequency Below Target");
 
         productPricePerformanceTextField.setEditable(false);
+        jLabel6.setText("Frequency Below Target");
+
         productPricePerformanceTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 productPricePerformanceTextFieldActionPerformed(evt);
@@ -149,6 +156,10 @@ public class ChangeTargetJPanel extends javax.swing.JPanel {
         jLabel3.setText("Product name");
 
         productNameTextField.setEditable(false);
+        jLabel7.setText("Margin");
+
+        jLabel3.setText("Product name");
+
         productNameTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 productNameTextFieldActionPerformed(evt);
@@ -161,6 +172,8 @@ public class ChangeTargetJPanel extends javax.swing.JPanel {
         jLabel4.setText("Frequency Above Target");
 
         Back.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+        jLabel4.setText("Frequency Above Target");
+
         Back.setText("<< Back");
         Back.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -179,6 +192,10 @@ public class ChangeTargetJPanel extends javax.swing.JPanel {
 
         jLabel11.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel11.setText("Target");
+        lblUpdateTarget.setText("Target Price:");
+
+        jLabel11.setText("Target:");
+
 
         txtSalesRev1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -187,6 +204,7 @@ public class ChangeTargetJPanel extends javax.swing.JPanel {
         });
 
         jLabel8.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+
         jLabel8.setText("Sales Revenues");
 
         txtTarget1.addActionListener(new java.awt.event.ActionListener() {
@@ -196,6 +214,7 @@ public class ChangeTargetJPanel extends javax.swing.JPanel {
         });
 
         jLabel9.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+
         jLabel9.setText("Frequency Below Target");
 
         txtMargin1.addActionListener(new java.awt.event.ActionListener() {
@@ -208,6 +227,9 @@ public class ChangeTargetJPanel extends javax.swing.JPanel {
         jLabel12.setText("Margin");
 
         jLabel13.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+
+        jLabel12.setText("Margin");
+
         jLabel13.setText("Product name");
 
         txtProdName1.addActionListener(new java.awt.event.ActionListener() {
@@ -220,6 +242,9 @@ public class ChangeTargetJPanel extends javax.swing.JPanel {
         jLabel14.setText("Frequency Above Target");
 
         btnReport.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel14.setText("Frequency Above Target");
+
+
         btnReport.setText("Generate Report");
         btnReport.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -228,12 +253,18 @@ public class ChangeTargetJPanel extends javax.swing.JPanel {
         });
 
         lblReportTitle.setFont(new java.awt.Font("Helvetica Neue", 1, 14)); // NOI18N
+
         lblReportTitle.setText("Performance Report");
+
+        lblReportTitle.setText("Report");
+
 
         lblTitle.setFont(new java.awt.Font("Helvetica Neue", 1, 14)); // NOI18N
         lblTitle.setText("Actual Report");
 
+
         btnSetTarget.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+
         btnSetTarget.setText("Set Target");
         btnSetTarget.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -241,8 +272,10 @@ public class ChangeTargetJPanel extends javax.swing.JPanel {
             }
         });
 
+
         jLabel1.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jLabel1.setText("REPORT");
+
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -284,6 +317,7 @@ public class ChangeTargetJPanel extends javax.swing.JPanel {
                                     .addComponent(productFrequencyBelowTargetTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(txtTarget, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(layout.createSequentialGroup()
+
                                 .addComponent(lblUpdateTarget, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(5, 5, 5)
                                 .addComponent(txtUpdateTarget, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -323,6 +357,17 @@ public class ChangeTargetJPanel extends javax.swing.JPanel {
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addComponent(txtTarget1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lblUpdateTarget, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(5, 5, 5)
+                                .addComponent(txtUpdateTarget, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(btnReport))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(168, 168, 168)
+                                .addComponent(btnSetTarget, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(173, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -332,6 +377,8 @@ public class ChangeTargetJPanel extends javax.swing.JPanel {
                     .addComponent(Back)
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(31, 31, 31)
+                .addComponent(Back)
+                .addGap(44, 44, 44)
                 .addComponent(lblTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -360,6 +407,12 @@ public class ChangeTargetJPanel extends javax.swing.JPanel {
                     .addComponent(txtUpdateTarget, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnReport, javax.swing.GroupLayout.DEFAULT_SIZE, 32, Short.MAX_VALUE))
                 .addGap(78, 78, 78)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblUpdateTarget)
+                    .addComponent(txtUpdateTarget, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnReport))
+                .addGap(79, 79, 79)
                 .addComponent(lblReportTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -385,6 +438,7 @@ public class ChangeTargetJPanel extends javax.swing.JPanel {
                 .addGap(42, 42, 42)
                 .addComponent(btnSetTarget, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(49, Short.MAX_VALUE))
+                .addContainerGap(55, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -455,6 +509,19 @@ public class ChangeTargetJPanel extends javax.swing.JPanel {
             updatedmargin = margin; 
             txtMargin1.setText(String.valueOf(margin));
         }
+        updatedtargetprice = Integer.parseInt(txtUpdateTarget.getText());
+        txtProdName1.setText(selectedproduct.toString());
+        txtFreqAboveTarget1.setText(String.valueOf(productSummary.getNumberAboveTarget()));
+        txtFreqBelowTarget1.setText(String.valueOf(productSummary.getNumberBelowTarget()));
+        txtSalesRev1.setText(String.valueOf(productSummary.getSalesRevenues()));
+        txtTarget1.setText(txtUpdateTarget.getText());
+        
+       int margin = 0;
+        for(OrderItem oi: orderItems){
+            margin = margin + ((oi.getActualPrice()-updatedtargetprice) * oi.getQuantity());
+        }
+        updatedmargin = margin; 
+        txtMargin1.setText(String.valueOf(margin));
         
     }//GEN-LAST:event_btnReportActionPerformed
 
@@ -468,6 +535,9 @@ public class ChangeTargetJPanel extends javax.swing.JPanel {
     private void txtUpdateTargetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUpdateTargetActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtUpdateTargetActionPerformed
+
+
+    }//GEN-LAST:event_btnSetTargetActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

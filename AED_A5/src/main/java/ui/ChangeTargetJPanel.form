@@ -111,6 +111,17 @@
                                   <Component id="txtTarget1" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
                               </Group>
                           </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="lblUpdateTarget" min="-2" pref="84" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
+                              <Component id="txtUpdateTarget" min="-2" pref="113" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="btnReport" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="168" max="-2" attributes="0"/>
+                              <Component id="btnSetTarget" min="-2" pref="154" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                   </Group>
               </Group>
@@ -132,6 +143,8 @@
                   <Component id="jLabel1" min="-2" pref="38" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+              <Component id="Back" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
               <Component id="lblTitle" min="-2" pref="25" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
@@ -166,6 +179,13 @@
                   <Component id="btnReport" alignment="3" pref="32" max="32767" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="78" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="lblUpdateTarget" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtUpdateTarget" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnReport" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="79" max="-2" attributes="0"/>
               <Component id="lblReportTitle" min="-2" pref="25" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
@@ -196,6 +216,7 @@
               <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
               <Component id="btnSetTarget" min="-2" pref="36" max="-2" attributes="0"/>
               <EmptySpace pref="49" max="32767" attributes="0"/>
+              <EmptySpace pref="55" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -213,6 +234,10 @@
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
       </Properties>
+        <Property name="text" type="java.lang.String" value="Target:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="productRevenueTextField">
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="productRevenueTextFieldActionPerformed"/>
       </Events>
@@ -234,6 +259,8 @@
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtTarget">
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtTargetActionPerformed"/>
       </Events>
@@ -288,6 +315,9 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Arial" size="12" style="1"/>
         </Property>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel4">
+      <Properties>
         <Property name="text" type="java.lang.String" value="Frequency Above Target"/>
       </Properties>
     </Component>
@@ -321,6 +351,10 @@
           <Font name="Arial" size="12" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Target"/>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel11">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Target:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtSalesRev1">
@@ -404,6 +438,7 @@
           <Font name="Helvetica Neue" size="14" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Performance Report"/>
+        <Property name="text" type="java.lang.String" value="Report"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="lblTitle">
